@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Kit & Style Guide - Medora Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/ui-kit.css">
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<div class="navbar">
+    <div class="navbar-left">
+        <div class="logo"></div>
+        <div class="system-title">Medora Health 医院管理系统</div>
+    </div>
+    <div class="navbar-right">
+        <div>doctor@china.com</div>
+        <div class="notification-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge">3</span>
+        </div>
+        <div class="user-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </div>
+        <span>Dr. Oven</span>
+    </div>
+</div>
+
+<div class="page">
+
+    <div class="back-row">
+        <div class="back-icon"></div>
+        UI Kit & Style Guide
+    </div>
+
+    <!-- TOP METRIC CARDS -->
+    <div class="card-row">
+        <div class="card metric-card">
+            <div class="metric-label">最近时间</div>
+            <div class="metric-value">2025-10-15 14:30</div>
+            <div class="metric-sub">分栏图例</div>
+            <div class="metric-icon icon-calendar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-label">最近更新</div>
+            <div class="metric-value">2小时前</div>
+            <div class="metric-sub">更新频率</div>
+            <div class="metric-icon icon-clock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-label">邀请状态</div>
+            <div class="metric-value">待签发</div>
+            <div class="metric-sub">通讯反馈</div>
+            <div class="metric-icon icon-mail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-label">病例风险</div>
+            <div class="metric-value metric-danger">高</div>
+            <div class="metric-sub">风险等级</div>
+            <div class="metric-icon icon-pulse">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- COLOR SYSTEM -->
+    <div class="color-section">
+        <div class="color-block">
+            <h3 class="section-title">主色</h3>
+            <div class="color-main-swatch">
+                <small>#003859</small>
+            </div>
+            <div class="color-steps">
+                <div style="background:#001f33"></div>
+                <div style="background:#003859"></div>
+                <div style="background:#00527a"></div>
+                <div style="background:#006b9b"></div>
+                <div style="background:#0083b8"></div>
+            </div>
+        </div>
+        <div class="color-block">
+            <h3 class="section-title">主色</h3>
+            <div class="color-main-swatch2">
+                <small>#03A8A1</small>
+            </div>
+            <div class="color-steps">
+                <div style="background:#016f69"></div>
+                <div style="background:#028f86"></div>
+                <div style="background:#03A8A1"></div>
+                <div style="background:#22c3bb"></div>
+                <div style="background:#6fded7"></div>
+            </div>
+        </div>
+        <div class="color-block">
+            <h3 class="section-title">辅助色</h3>
+            <div class="color-sub-swatch">
+                <small style="padding:8px 10px 10px 10px;">#A3B1B8</small>
+            </div>
+            <div class="color-steps">
+                <div style="background:#6f7c83"></div>
+                <div style="background:#89979e"></div>
+                <div style="background:#A3B1B8"></div>
+                <div style="background:#c5d0d6"></div>
+                <div style="background:#e3eaef"></div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="section-title">渐变色</h3>
+    <div class="color-gradient-wrapper">
+        <div class="color-gradient card"></div>
+    </div>
+
+    <!-- TYPOGRAPHY -->
+    <div class="typo-card">
+        <div class="typo-heading">Typography 字体：Inter / Alibaba PuHuiTi 3.0</div>
+        <table class="typo-table">
+            <tr>
+                <td>主标题字体样式</td>
+                <td>16px</td>
+            </tr>
+            <tr>
+                <td>内容字样样式1</td>
+                <td>14px</td>
+            </tr>
+            <tr>
+                <td>内容字样样式2</td>
+                <td>14px</td>
+            </tr>
+            <tr>
+                <td>内容字样样式3</td>
+                <td>12px</td>
+            </tr>
+            <tr>
+                <td>辅助说明文字</td>
+                <td>12px</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- FORM EXAMPLES -->
+    <div class="form-section">
+        <h3 class="section-title">表单样式</h3>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">活动名称</span>
+                <input class="input" placeholder="请输入文字内容…" />
+            </div>
+
+            <div class="form-group">
+                <span class="label">选择框</span>
+                <select class="select">
+                    <option>请选择内容</option>
+                    <option>选项 1</option>
+                    <option>选项 2</option>
+                    <option>选项 3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">选择时间</span>
+                <div class="date-row">
+                    <input class="input" type="date" placeholder="选择日期" />
+                    <input class="input" type="time" placeholder="选择时间" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">提交按钮</span>
+                <div class="segmented">
+                    <button class="active">立即使用</button>
+                    <button>选择时间</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary">确认</button>
+    </div>
+
+    <!-- TAB SECTION -->
+    <div>
+        <div class="tab-section-title">TAB</div>
+        <div class="tabs">
+            <div class="tab active">新建病例</div>
+            <div class="tab">预约管理</div>
+            <div class="tab">消息</div>
+            <div class="tab">任务</div>
+            <div class="tab">统计报表</div>
+            <div class="tab">质量跟踪</div>
+        </div>
+    </div>
+
+    <!-- STATUS CHIPS -->
+    <div class="status-row">
+        <div class="status-chip">
+            <div class="status-icon"></div>
+            <span>发送成功</span>
+            <span class="status-dot green"></span>
+        </div>
+
+        <div class="status-chip">
+            <span>待关注</span>
+            <span class="status-dot red"></span>
+            <span class="status-dot yellow"></span>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/common.js"></script>
+<script src="../js/ui-kit.js"></script>
+</body>
+</html>

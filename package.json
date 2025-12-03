@@ -1,0 +1,22 @@
+{
+  "name": "medora-health-crm",
+  "version": "1.0.0",
+  "description": "Medora Health Hospital Management System - A modern CRM for healthcare professionals",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in your browser' && exit 0"
+  },
+  "keywords": [
+    "hospital",
+    "crm",
+    "healthcare",
+    "patient-management",
+    "medical"
+  ],
+  "author": "Medora Health",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medora-health/crm"
+  }
+}

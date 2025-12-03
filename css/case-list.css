@@ -1,0 +1,99 @@
+/* Case List Specific Styles */
+
+.back-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 17px;
+    margin-bottom: var(--spacing-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-dark);
+    cursor: pointer;
+}
+
+.back-row:hover {
+    color: var(--primary-teal);
+}
+
+.back-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-circle);
+    background: var(--bg-light);
+    transition: background var(--transition-fast);
+}
+
+.back-row:hover .back-icon {
+    background: var(--primary-teal);
+}
+
+/* Filter Card */
+.filter-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.search-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.search-box {
+    flex: 1;
+}
+
+/* Filters */
+.filters {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: color var(--transition-fast);
+}
+
+.filters label:hover {
+    color: var(--primary-teal);
+}
+
+.filters input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .back-row {
+        font-size: 15px;
+    }
+    
+    .filter-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .search-row {
+        flex-direction: column;
+    }
+    
+    .search-box,
+    .dropdown {
+        width: 100%;
+    }
+    
+    .filters {
+        gap: 12px;
+    }
+}

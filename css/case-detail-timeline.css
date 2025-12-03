@@ -1,0 +1,124 @@
+/* TIMELINE STYLES */
+
+.timeline {
+    padding: 30px 50px;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    font-size: 13px;
+    color: #7fa59e;
+    text-align: right;
+    font-weight: var(--font-weight-medium);
+}
+
+.timeline-time span {
+    display: block;
+    font-size: 12px;
+    color: #9ab8b3;
+    margin-top: 2px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 76px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: #70c0b3;
+    border-radius: var(--radius-circle);
+    border: 3px solid #d9f3ef;
+    z-index: 2;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 81px;
+    top: 18px;
+    width: 2px;
+    height: calc(100% + 22px);
+    background: linear-gradient(to bottom, #70c0b3, #a8d9d0);
+    z-index: 1;
+}
+
+.timeline-content {
+    padding: 14px 20px;
+    background: linear-gradient(to right, #effcf9, #ffffff);
+    border-radius: 12px;
+    border-left: 4px solid #70c0b3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(4px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary-teal);
+}
+
+.timeline-title {
+    font-size: 15px;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 4px;
+    color: var(--primary-darker);
+}
+
+.timeline-desc {
+    font-size: 13px;
+    color: #6b8f89;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 20px 20px;
+    }
+
+    .timeline-item {
+        padding-left: 70px;
+    }
+
+    .timeline-time {
+        width: 55px;
+        font-size: 12px;
+    }
+
+    .timeline-dot {
+        left: 61px;
+    }
+
+    .timeline-line {
+        left: 66px;
+    }
+
+    .timeline-content {
+        padding: 12px 16px;
+    }
+
+    .timeline-title {
+        font-size: 14px;
+    }
+
+    .timeline-desc {
+        font-size: 12px;
+    }
+}

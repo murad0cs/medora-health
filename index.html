@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medora Health - Hospital Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- TOP NAVBAR -->
+<div class="navbar">
+    <div class="navbar-left">
+        <div class="logo"></div>
+        <div class="title">Medora Health 医院管理系统</div>
+    </div>
+    <div class="navbar-right">
+        <div>doctor@china.com</div>
+        <div class="notification-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-badge">3</span>
+        </div>
+        <div class="profile">
+            <div class="user-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <span>Dr. Oven</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="welcome">欢迎回来，查看您今天的工作概览~</div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+        <div class="action-card">
+            <div class="action-title">新建病例</div>
+        </div>
+        <div class="action-card">
+            <div class="action-title">预约管理</div>
+        </div>
+        <div class="action-card">
+            <div class="action-title">发送消息</div>
+        </div>
+        <div class="action-card">
+            <div class="action-title">查看报告</div>
+        </div>
+    </div>
+
+    <!-- PATIENT PROCESSING SECTION -->
+    <div class="section">
+        <div class="section-title">待处理病历</div>
+
+        <div class="patient-card">
+            <div class="patient-img"></div>
+            <div class="patient-info">
+                <div class="patient-name">李敏 — 45岁 / 男</div>
+                <div class="patient-meta">疾病描述：高血压，上压180，下压110</div>
+            </div>
+            <span class="status-badge status-high">紧急</span>
+        </div>
+
+        <div class="patient-card">
+            <div class="patient-img"></div>
+            <div class="patient-info">
+                <div class="patient-name">王芳 — 32岁 / 女</div>
+                <div class="patient-meta">疾病描述：糖尿病复查，血糖控制良好</div>
+            </div>
+            <span class="status-badge status-medium">处理中</span>
+        </div>
+
+        <div class="patient-card">
+            <div class="patient-img"></div>
+            <div class="patient-info">
+                <div class="patient-name">张伟 — 28岁 / 男</div>
+                <div class="patient-meta">疾病描述：常规体检，无明显异常</div>
+            </div>
+            <span class="status-badge status-low">低</span>
+        </div>
+    </div>
+
+    <!-- MESSAGES + SCHEDULE -->
+    <div style="display: flex; gap: 30px;">
+
+        <!-- LEFT: MESSAGES -->
+        <div class="section" style="flex: 1;">
+            <div class="section-title">未读消息 (3)</div>
+
+            <div class="message-item">
+                <div class="message-icon"></div>
+                <div class="message-content">
+                    <div class="msg-title">护士站</div>
+                    <div class="msg-text">静脉肿胀需紧急关注，患者血压异常，请及时查看…</div>
+                    <div class="msg-time">10分钟前</div>
+                </div>
+            </div>
+
+            <div class="message-item">
+                <div class="message-icon"></div>
+                <div class="message-content">
+                    <div class="msg-title">药房</div>
+                    <div class="msg-text">处方需确认，有新的处方需要您的审核确认</div>
+                    <div class="msg-time">25分钟前</div>
+                </div>
+            </div>
+
+            <div class="message-item">
+                <div class="message-icon"></div>
+                <div class="message-content">
+                    <div class="msg-title">检验科</div>
+                    <div class="msg-text">检验报告已出，请查看患者检测结果</div>
+                    <div class="msg-time">1小时前</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: SCHEDULE -->
+        <div class="section" style="flex: 2;">
+            <div class="section-title">预约管理</div>
+
+            <div class="schedule-grid">
+                <div class="time-slot">09:00<br><span class="slot-status-confirmed">已确认</span></div>
+                <div class="time-slot">09:30<br><span class="slot-status-confirmed">已确认</span></div>
+                <div class="time-slot">10:00<br><span class="slot-status-pending">待确认</span></div>
+                <div class="time-slot">10:30<br><span class="slot-status-pending">待确认</span></div>
+                <div class="time-slot">11:00<br><span class="slot-status-confirmed">已确认</span></div>
+                <div class="time-slot">11:30<br><span class="slot-status-confirmed">已确认</span></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
