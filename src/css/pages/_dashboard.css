@@ -1,0 +1,372 @@
+/**
+ * Dashboard Page Styles
+ * Medora Health CRM
+ */
+
+/* Welcome Section */
+.dashboard-welcome {
+    margin-bottom: var(--space-6);
+}
+
+.dashboard-welcome-text {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+}
+
+/* Quick Actions Grid */
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .dashboard-actions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Stats Cards */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Dashboard Sections Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Pending Cases Section */
+.pending-cases {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* Messages Section */
+.messages-preview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.message-preview-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.message-preview-item:hover {
+    background: var(--bg-secondary);
+}
+
+.message-preview-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+    flex-shrink: 0;
+}
+
+.message-preview-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.message-preview-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.message-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-1);
+}
+
+.message-preview-sender {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.message-preview-time {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.message-preview-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Schedule Section */
+.schedule-preview {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--space-5);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.schedule-slot {
+    padding: var(--space-3);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.schedule-slot-time {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.schedule-slot-status {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.schedule-slot-status.confirmed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.schedule-slot-status.pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.schedule-slot-status.available {
+    background: var(--bg-tertiary);
+    color: var(--text-tertiary);
+}
+
+
+ * Dashboard Page Styles
+ * Medora Health CRM
+ */
+
+/* Welcome Section */
+.dashboard-welcome {
+    margin-bottom: var(--space-6);
+}
+
+.dashboard-welcome-text {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+}
+
+/* Quick Actions Grid */
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .dashboard-actions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Stats Cards */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Dashboard Sections Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Pending Cases Section */
+.pending-cases {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* Messages Section */
+.messages-preview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.message-preview-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.message-preview-item:hover {
+    background: var(--bg-secondary);
+}
+
+.message-preview-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+    flex-shrink: 0;
+}
+
+.message-preview-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.message-preview-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.message-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-1);
+}
+
+.message-preview-sender {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.message-preview-time {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.message-preview-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Schedule Section */
+.schedule-preview {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--space-5);
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.schedule-slot {
+    padding: var(--space-3);
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.schedule-slot-time {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.schedule-slot-status {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.schedule-slot-status.confirmed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.schedule-slot-status.pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.schedule-slot-status.available {
+    background: var(--bg-tertiary);
+    color: var(--text-tertiary);
+}
+

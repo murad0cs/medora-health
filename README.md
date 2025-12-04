@@ -1,214 +1,198 @@
-# Medora Health CRM - Hospital Management System
+# Medora Health CRM
 
-A modern, responsive web application for hospital management built with vanilla HTML, CSS, and JavaScript.
+A modern Hospital Management System / CRM for healthcare professionals built with HTML, CSS, and JavaScript.
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js >= 16.0.0 (for the local server)
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+
+### Running Locally
+
+1. Clone or download this repository
+
+2. Open a terminal in the project folder
+
+3. Install dependencies and start the server:
+
+```bash
+# Install dependencies (first time only)
+npm install
+
+# Start the local development server
+npx serve -l 3000
+```
+
+4. Open your browser and visit:
+
+```
+http://localhost:3000/pages/doctor-preview.html
+```
+
+### Available Pages
+
+Once the server is running, you can access these pages:
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Doctor Dashboard | `/pages/doctor-preview.html` | Main dashboard with overview |
+| Case List | `/pages/case-list.html` | Patient cases table with filtering |
+| Case Detail | `/pages/case-detail.html` | Detailed case view with tabs |
+| Case Timeline | `/pages/case-detail-timeline.html` | Timeline view of case history |
+| Messages | `/pages/messages.html` | Real-time messaging interface |
+| Appointments | `/pages/appointments.html` | Calendar and schedule management |
+| Reports | `/pages/reports.html` | Medical reports viewer |
+| UI Kit | `/pages/ui-kit.html` | Design system documentation |
+
+### Alternative: Using Python
+
+If you have Python installed:
+
+```bash
+# Python 3
+python -m http.server 3000
+
+# Then visit: http://localhost:3000/pages/doctor-preview.html
+```
+
+### Alternative: Using VS Code Live Server
+
+1. Install the "Live Server" extension in VS Code
+2. Right-click on `pages/doctor-preview.html`
+3. Select "Open with Live Server"
+
+## Figma Design Mapping
+
+This project implements the design from the Figma file: [Meaora Health/CRM](https://www.figma.com/design/gZ2r1YvbPoIcGT7CPMGLTC/Meaora-Health-CRM)
+
+### Figma Frames to Implementation
+
+| Figma Frame | Implementation | Description |
+|-------------|----------------|-------------|
+| 医生-预览 | `doctor-preview.html` | Main doctor dashboard with pending cases, messages overview, and appointment schedule |
+| UI Kit | `ui-kit.html` | Design system components including colors, typography, forms, and status indicators |
+| 医生-病例详情1 | `case-detail.html` (Medical Info tab) | Case detail with patient info, medical history, and reports |
+| 医生-病例详情2 | `case-detail-timeline.html` | Timeline view showing case activity history |
+| 医生-病例详情3 | `case-detail.html` (Messages tab) | In-case messaging with patient |
+| 医生-病例详情4 | `case-detail.html` (Tasks tab) | Task management for the case |
+| 医生-病例详情5 | `case-detail.html` (Process tab) | Medical process workflow steps |
+| 医生-病例详情5 | `case-detail.html` (Follow-up tab) | Follow-up appointment planning |
+| 医生-消息中心 | `messages.html` | Full messaging center with conversation list and chat interface |
+
+### Additional Pages (Extended from Figma)
+
+These pages were added to provide complete navigation flow:
+
+| Page | File | Purpose |
+|------|------|---------|
+| Case List | `case-list.html` | Table view of all patient cases with filtering |
+| Appointments | `appointments.html` | Full calendar and scheduling interface |
+| Reports | `reports.html` | Medical reports grid with filtering |
+
+### Design Elements Implemented
+
+- Sidebar navigation (teal gradient with icons)
+- Top navbar with logo, notifications, and user profile
+- Card-based layouts with glassmorphism effect
+- Metric cards with colored icons
+- Tab navigation for case details
+- Status badges and risk indicators
+- Form components (inputs, dropdowns, date pickers)
+- Message bubbles and conversation list
+- Timeline visualization
+- Calendar mini-view and schedule grid
 
 ## Project Structure
 
 ```
-Medora/
-├── index.html                 # Dashboard (Doctor Preview)
-├── assets/
-│   └── images/               # Images and icons
-├── css/
-│   ├── variables.css         # CSS custom properties (colors, fonts, spacing)
-│   ├── common.css            # Shared styles (navbar, buttons, cards, tables)
-│   ├── dashboard.css         # Dashboard-specific styles
-│   └── case-list.css         # Case list page styles
-├── js/
-│   ├── common.js             # Shared utilities (navigation, search, UI helpers)
-│   ├── dashboard.js          # Dashboard page functionality
-│   └── case-list.js          # Case list page functionality
-└── pages/
-    ├── case-list.html        # Case management list
-    ├── case-detail.html      # Individual case details (placeholder)
-    ├── appointments.html     # Appointment management (placeholder)
-    ├── messages.html         # Message center (placeholder)
-    └── reports.html          # Reports view (placeholder)
+medora-health-crm/
+├── css/                    # Stylesheets
+│   ├── variables.css       # CSS custom properties (colors, spacing, etc.)
+│   ├── common.css          # Shared styles (navbar, buttons, cards)
+│   ├── doctor-preview.css  # Dashboard page styles
+│   ├── case-list.css       # Case list page styles
+│   ├── case-detail.css     # Case detail page styles
+│   ├── messages.css        # Messages page styles
+│   ├── appointments.css    # Appointments page styles
+│   └── reports.css         # Reports page styles
+│
+├── js/                     # JavaScript files
+│   ├── common.js           # Shared utilities and navigation
+│   ├── doctor-preview.js   # Dashboard functionality
+│   ├── case-list.js        # Case list functionality
+│   ├── case-detail.js      # Case detail functionality
+│   ├── messages.js         # Messages functionality
+│   └── appointments.js     # Appointments functionality
+│
+├── pages/                  # HTML pages
+│   ├── doctor-preview.html # Main dashboard
+│   ├── case-list.html      # Cases management
+│   ├── case-detail.html    # Single case view
+│   ├── messages.html       # Messaging center
+│   ├── appointments.html   # Schedule management
+│   ├── reports.html        # Reports viewer
+│   └── ui-kit.html         # Style guide
+│
+├── package.json            # Node.js dependencies
+└── README.md               # This file
 ```
 
 ## Design System
 
-### Color Palette
-- **Primary Teal**: `#0ab4a8` - Main brand color
-- **Primary Dark**: `#1d615a` - Text and headings
-- **Background Gradient**: `#d9f3ef → #c8e3df → #b9dbd9`
-- **Status Colors**:
-  - Urgent: `#ff6b6b`
-  - Medium: `#f5b942`
-  - Low/Success: `#66c18c`
+### CSS Variables
 
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 300 (Light), 400 (Regular), 600 (Semibold), 700 (Bold)
+All design tokens are defined in `css/variables.css`:
 
-### Component Library
-- Navbar with logo and user profile
-- Action cards with hover effects
-- Patient cards with status badges
-- Message items with timestamps
-- Data tables with filters
-- Search boxes and dropdowns
-- Buttons (primary and secondary)
+- Colors: Primary teal (#0ab4a8), dark teal, status colors
+- Typography: Inter font family, various weights
+- Spacing: Consistent spacing scale (5px to 30px)
+- Border Radius: From 8px to fully rounded
+- Shadows: Subtle elevation system
+- Transitions: Smooth 0.2s-0.3s animations
 
-## Getting Started
+### Key Components
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools required!
-
-### Installation
-
-1. Clone or download the project
-2. Open `index.html` in your browser
-3. That's it! No dependencies to install.
-
-### Development
-
-Simply edit the files and refresh your browser. The project uses vanilla HTML/CSS/JS with no build process.
-
-## Pages
-
-### Implemented
-1. **Dashboard** (`index.html`)
-   - Overview of pending cases
-   - Quick action cards
-   - Unread messages
-   - Appointment schedule
-
-2. **Case List** (`pages/case-list.html`)
-   - Filterable table of all cases
-   - Search functionality
-   - Status filters
-   - Action buttons
-
-### Placeholder Pages
-- Case Detail
-- Appointments
-- Messages
-- Reports
-
-## Adding New Pages
-
-### 1. Create HTML File
-
-```html
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title - Medora Health</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/your-page.css">
-</head>
-<body>
-    <!-- Use navbar structure from existing pages -->
-    <script src="../js/common.js"></script>
-    <script src="../js/your-page.js"></script>
-</body>
-</html>
-```
-
-### 2. Create CSS File (if needed)
-
-Add page-specific styles to `css/your-page.css`
-
-### 3. Create JS File (if needed)
-
-Add page-specific functionality to `js/your-page.js`
-
-### 4. Add Navigation
-
-Update `js/common.js` to include your new page:
-
-```javascript
-navigate: {
-    toYourPage() {
-        window.location.href = '/pages/your-page.html';
-    }
-}
-```
-
-## API Reference
-
-### MedoraApp Object
-
-Global utility object available on all pages.
-
-#### Navigation
-```javascript
-MedoraApp.navigate.toDashboard()      // Go to dashboard
-MedoraApp.navigate.toCaseList()       // Go to case list
-MedoraApp.navigate.toCaseDetail(id)   // Go to specific case
-MedoraApp.navigate.toAppointments()   // Go to appointments
-MedoraApp.navigate.toMessages()       // Go to messages
-MedoraApp.navigate.toReports()        // Go to reports
-MedoraApp.navigate.back()             // Browser back button
-```
-
-#### Search & Filters
-```javascript
-MedoraApp.search.filterTable(searchTerm, selector, columns)
-MedoraApp.search.filterByStatus(statuses, selector, column)
-```
-
-#### UI Helpers
-```javascript
-MedoraApp.ui.showLoading(element)
-MedoraApp.ui.hideLoading(element)
-MedoraApp.ui.showNotification(message, type)
-MedoraApp.ui.formatDate(dateString)
-MedoraApp.ui.getRelativeTime(dateString)
-```
-
-#### Storage
-```javascript
-MedoraApp.storage.save(key, value)
-MedoraApp.storage.load(key)
-MedoraApp.storage.remove(key)
-MedoraApp.storage.clear()
-```
+- Navbar: Top navigation with logo, notifications, user info
+- Cards: Glassmorphism cards with backdrop blur
+- Buttons: Primary teal, outlined, and ghost variants
+- Badges: Status indicators (danger, warning, success)
+- Tables: Data tables with hover effects
+- Tabs: Pill-style tab navigation
+- Forms: Rounded inputs and dropdowns
 
 ## Features
 
-- Responsive designdesktop, tablet, mobile)
-- Modern gradient backgrounds
-- Glassmorphism effects
-- Smooth transitions and animations
-- Search and filter functionality
-- Modular CSS architecture with variables
-- Reusable JavaScript utilities
-- Clean, semantic HTML
-- Accessibility considerations
-- No build process required
+- Responsive design for desktop and tablet
+- Interactive navigation between pages
+- Tab-based content organization
+- Real-time messaging interface mockup
+- Calendar-based appointment scheduling
+- Patient case management workflow
 
-## Best Practices
+## Customization
 
-### CSS
-- Use CSS variables from `variables.css` for consistency
-- Follow BEM-like naming conventions
-- Keep page-specific styles in separate files
-- Use common styles for shared components
+### Changing Colors
 
-### JavaScript
-- Use `MedoraApp` utilities instead of reinventing
-- Keep page-specific code in separate files
-- Always include `common.js` first
-- Use event delegation for dynamic elements
+Edit the CSS variables in `css/variables.css`:
 
-### HTML
-- Include all three CSS files: variables, common, page-specific
-- Include scripts at the end of body
-- Use semantic HTML elements
-- Add proper alt text to images
+```css
+:root {
+    --primary-teal: #0ab4a8;      /* Main brand color */
+    --primary-dark: #1d615a;      /* Dark variant */
+    --status-urgent: #ff6b6b;     /* Danger/urgent status */
+    --status-medium: #f5b942;     /* Warning status */
+    --status-success: #0aa06f;    /* Success status */
+}
+```
 
-## Responsive Breakpoints
+### Adding New Pages
 
-- **Desktop**: > 1024px
-- **Tablet**: 768px - 1024px
-- **Mobile**: < 768px
+1. Create a new HTML file in `pages/`
+2. Copy the navbar structure from an existing page
+3. Create a corresponding CSS file in `css/`
+4. Link the CSS files in your HTML head
 
 ## Browser Support
 
@@ -217,38 +201,6 @@ MedoraApp.storage.clear()
 - Safari (latest)
 - Edge (latest)
 
-## Coding Standards
-
-### Naming Conventions
-- CSS classes: kebab-case (`patient-card`, `action-title`)
-- JavaScript: camelCase (`filterTable`, `showLoading`)
-- Files: kebab-case (`case-list.html`, `common.js`)
-
-### File Organization
-- Pages go in `/pages/` directory
-- Styles go in `/css/` directory
-- Scripts go in `/js/` directory
-- Images go in `/assets/images/` directory
-
-## Future Enhancements
-
-- Implement remaining pages (appointments, messages, reports)
-- Add backend API integration
-- Implement authentication
-- Add data persistence
-- Create print-friendly views
-- Add export functionality (PDF, Excel)
-- Implement real-time notifications
-- Add dark mode support
-
 ## License
 
-Proprietary - Medora Health CRM
-
-## Support
-
-For support, contact: doctor@china.com
-
----
-
-Built with vanilla HTML, CSS, and JavaScript
+Proprietary - Medora Health

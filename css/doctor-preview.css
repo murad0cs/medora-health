@@ -146,6 +146,17 @@
     font-weight: var(--font-weight-bold);
     font-size: 15px;
     margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--text-dark);
+}
+
+.case-demographics {
+    font-weight: var(--font-weight-normal);
+    font-size: 13px;
+    color: #7a9a96;
+    flex-shrink: 0;
 }
 
 .case-meta {
@@ -266,6 +277,14 @@
     background: var(--primary-teal);
     border-radius: var(--radius-circle);
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .msg-content {
@@ -347,6 +366,44 @@
     .tabs {
         width: 100%;
         justify-content: space-between;
+    }
+    
+    .tab {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+    }
+    
+    .tab {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
     }
     
     .tab {

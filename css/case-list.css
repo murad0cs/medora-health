@@ -3,28 +3,55 @@
 .back-row {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    font-size: 17px;
+    gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--primary-dark);
-    cursor: pointer;
-}
-
-.back-row:hover {
-    color: var(--primary-teal);
 }
 
 .back-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-circle);
-    background: var(--bg-light);
-    transition: background var(--transition-fast);
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
-.back-row:hover .back-icon {
+.back-icon:hover {
     background: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+.back-icon:hover svg {
+    stroke: white;
+}
+
+.back-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary-darker);
+}
+
+.page-title-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-darker);
+    margin: 0;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: var(--text-medium);
+    margin: 4px 0 0 0;
 }
 
 /* Filter Card */
@@ -71,6 +98,60 @@
 }
 
 .filters input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .back-row {
+        font-size: 15px;
+    }
+    
+    .filter-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .search-row {
+        flex-direction: column;
+    }
+    
+    .search-box,
+    .dropdown {
+        width: 100%;
+    }
+    
+    .filters {
+        gap: 12px;
+    }
+}
+
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .back-row {
+        font-size: 15px;
+    }
+    
+    .filter-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .search-row {
+        flex-direction: column;
+    }
+    
+    .search-box,
+    .dropdown {
+        width: 100%;
+    }
+    
+    .filters {
+        gap: 12px;
+    }
+}
+
     cursor: pointer;
 }
 

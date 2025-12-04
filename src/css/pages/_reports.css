@@ -1,0 +1,486 @@
+/**
+ * Reports Page Styles
+ * Medora Health CRM
+ */
+
+/* Reports Filter */
+.reports-filter {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-6);
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.filter-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.filter-select {
+    padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23758585' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-2) center;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.filter-search {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.filter-search input {
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+}
+
+.filter-search input:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+}
+
+.filter-search svg {
+    position: absolute;
+    left: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-tertiary);
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .reports-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Report Card */
+.report-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.report-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+}
+
+.report-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+}
+
+.report-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.report-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.report-icon.pdf {
+    background: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.report-icon.image {
+    background: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.report-icon.lab {
+    background: var(--color-primary-100);
+    color: var(--primary-teal);
+}
+
+.report-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.report-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.report-patient {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.report-card-body {
+    padding: 0 var(--space-4) var(--space-3);
+}
+
+.report-meta-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.report-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.report-meta-item svg {
+    width: 14px;
+    height: 14px;
+}
+
+.report-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+}
+
+.report-status {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+}
+
+.report-status.new {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+.report-status.reviewed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.report-status.pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.report-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.report-action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+    transition: all var(--transition-fast);
+}
+
+.report-action-btn:hover {
+    background: var(--bg-primary);
+    color: var(--primary-teal);
+}
+
+.report-action-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+ * Reports Page Styles
+ * Medora Health CRM
+ */
+
+/* Reports Filter */
+.reports-filter {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-6);
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.filter-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.filter-select {
+    padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23758585' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-2) center;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.filter-search {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.filter-search input {
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+}
+
+.filter-search input:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+}
+
+.filter-search svg {
+    position: absolute;
+    left: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-tertiary);
+}
+
+/* Reports Grid */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .reports-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Report Card */
+.report-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.report-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+}
+
+.report-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+}
+
+.report-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.report-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.report-icon.pdf {
+    background: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.report-icon.image {
+    background: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.report-icon.lab {
+    background: var(--color-primary-100);
+    color: var(--primary-teal);
+}
+
+.report-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.report-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.report-patient {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.report-card-body {
+    padding: 0 var(--space-4) var(--space-3);
+}
+
+.report-meta-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.report-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.report-meta-item svg {
+    width: 14px;
+    height: 14px;
+}
+
+.report-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-secondary);
+}
+
+.report-status {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+}
+
+.report-status.new {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+.report-status.reviewed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.report-status.pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.report-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.report-action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+    transition: all var(--transition-fast);
+}
+
+.report-action-btn:hover {
+    background: var(--bg-primary);
+    color: var(--primary-teal);
+}
+
+.report-action-btn svg {
+    width: 18px;
+    height: 18px;
+}
+

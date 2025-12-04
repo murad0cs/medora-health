@@ -1,0 +1,143 @@
+/**
+ * Main CSS Entry Point
+ * Medora Health CRM
+ * 
+ * This file imports all CSS modules in the correct order.
+ * Import this single file in your HTML pages.
+ */
+
+/*
+ * Base Styles
+ */
+
+/* CSS Reset & Normalize */
+@import './base/_reset.css';
+
+/* Design Tokens (CSS Variables) */
+@import './base/_variables.css';
+
+/* Typography */
+@import './base/_typography.css';
+
+/*
+ * Layout Styles
+ */
+
+/* Grid System & Utilities */
+@import './layouts/_grid.css';
+
+/* Navbar */
+@import './layouts/_navbar.css';
+
+/* Sidebar */
+@import './layouts/_sidebar.css';
+
+/*
+ * Component Styles
+ */
+
+/* Buttons */
+@import './components/_buttons.css';
+
+/* Cards */
+@import './components/_cards.css';
+
+/* Forms */
+@import './components/_forms.css';
+
+/* Badges & Status */
+@import './components/_badges.css';
+
+/* Tables */
+@import './components/_tables.css';
+
+/*
+ * Page-Specific Styles
+ * Import only on pages that need them
+ */
+
+/* 
+ * Page styles are imported separately in each HTML file
+ * to avoid loading unnecessary CSS.
+ * 
+ * Available page styles:
+ * - ./pages/_dashboard.css
+ * - ./pages/_case-detail.css
+ * - ./pages/_case-list.css
+ * - ./pages/_messages.css
+ * - ./pages/_appointments.css
+ * - ./pages/_reports.css
+ */
+
+
+
+
+ * Medora Health CRM
+ * 
+ * This file imports all CSS modules in the correct order.
+ * Import this single file in your HTML pages.
+ */
+
+/*
+ * Base Styles
+ */
+
+/* CSS Reset & Normalize */
+@import './base/_reset.css';
+
+/* Design Tokens (CSS Variables) */
+@import './base/_variables.css';
+
+/* Typography */
+@import './base/_typography.css';
+
+/*
+ * Layout Styles
+ */
+
+/* Grid System & Utilities */
+@import './layouts/_grid.css';
+
+/* Navbar */
+@import './layouts/_navbar.css';
+
+/* Sidebar */
+@import './layouts/_sidebar.css';
+
+/*
+ * Component Styles
+ */
+
+/* Buttons */
+@import './components/_buttons.css';
+
+/* Cards */
+@import './components/_cards.css';
+
+/* Forms */
+@import './components/_forms.css';
+
+/* Badges & Status */
+@import './components/_badges.css';
+
+/* Tables */
+@import './components/_tables.css';
+
+/*
+ * Page-Specific Styles
+ * Import only on pages that need them
+ */
+
+/* 
+ * Page styles are imported separately in each HTML file
+ * to avoid loading unnecessary CSS.
+ * 
+ * Available page styles:
+ * - ./pages/_dashboard.css
+ * - ./pages/_case-detail.css
+ * - ./pages/_case-list.css
+ * - ./pages/_messages.css
+ * - ./pages/_appointments.css
+ * - ./pages/_reports.css
+ */
+

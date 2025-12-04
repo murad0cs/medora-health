@@ -1,0 +1,364 @@
+/**
+ * Badge & Status Components
+ * Medora Health CRM
+ */
+
+/* Base Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    border-radius: var(--radius-badge);
+    white-space: nowrap;
+}
+
+/* Badge Variants */
+.badge-primary {
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+}
+
+.badge-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.badge-success {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.badge-warning {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.badge-error {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+}
+
+.badge-info {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-badge);
+}
+
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+}
+
+/* Status Variants */
+.status-urgent,
+.status-high {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+}
+
+.status-urgent::before,
+.status-high::before {
+    background: var(--color-error);
+}
+
+.status-processing,
+.status-medium,
+.status-pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.status-processing::before,
+.status-medium::before,
+.status-pending::before {
+    background: var(--color-warning);
+}
+
+.status-completed,
+.status-low,
+.status-confirmed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.status-completed::before,
+.status-low::before,
+.status-confirmed::before {
+    background: var(--color-success);
+}
+
+.status-new {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+.status-new::before {
+    background: var(--color-info);
+}
+
+.status-reviewed {
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+}
+
+.status-reviewed::before {
+    background: var(--primary-teal);
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 var(--space-1);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: white;
+    background: var(--color-error);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Count Badge */
+.count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: white;
+    background: var(--primary-teal);
+    border-radius: var(--radius-full);
+}
+
+/* Dot Indicator */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.dot-success { background: var(--color-success); }
+.dot-warning { background: var(--color-warning); }
+.dot-error { background: var(--color-error); }
+.dot-info { background: var(--color-info); }
+.dot-primary { background: var(--primary-teal); }
+
+/* Online Status Dot */
+.online-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--color-success);
+    border: 2px solid white;
+    border-radius: var(--radius-full);
+}
+
+
+ * Badge & Status Components
+ * Medora Health CRM
+ */
+
+/* Base Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    border-radius: var(--radius-badge);
+    white-space: nowrap;
+}
+
+/* Badge Variants */
+.badge-primary {
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+}
+
+.badge-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.badge-success {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.badge-warning {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.badge-error {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+}
+
+.badge-info {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-badge);
+}
+
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+}
+
+/* Status Variants */
+.status-urgent,
+.status-high {
+    background: var(--color-error-light);
+    color: var(--color-error-dark);
+}
+
+.status-urgent::before,
+.status-high::before {
+    background: var(--color-error);
+}
+
+.status-processing,
+.status-medium,
+.status-pending {
+    background: var(--color-warning-light);
+    color: var(--color-warning-dark);
+}
+
+.status-processing::before,
+.status-medium::before,
+.status-pending::before {
+    background: var(--color-warning);
+}
+
+.status-completed,
+.status-low,
+.status-confirmed {
+    background: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.status-completed::before,
+.status-low::before,
+.status-confirmed::before {
+    background: var(--color-success);
+}
+
+.status-new {
+    background: var(--color-info-light);
+    color: var(--color-info-dark);
+}
+
+.status-new::before {
+    background: var(--color-info);
+}
+
+.status-reviewed {
+    background: var(--color-primary-100);
+    color: var(--color-primary-700);
+}
+
+.status-reviewed::before {
+    background: var(--primary-teal);
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 var(--space-1);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: white;
+    background: var(--color-error);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Count Badge */
+.count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: white;
+    background: var(--primary-teal);
+    border-radius: var(--radius-full);
+}
+
+/* Dot Indicator */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.dot-success { background: var(--color-success); }
+.dot-warning { background: var(--color-warning); }
+.dot-error { background: var(--color-error); }
+.dot-info { background: var(--color-info); }
+.dot-primary { background: var(--primary-teal); }
+
+/* Online Status Dot */
+.online-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--color-success);
+    border: 2px solid white;
+    border-radius: var(--radius-full);
+}
+

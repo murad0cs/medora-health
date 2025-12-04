@@ -1,0 +1,426 @@
+/**
+ * Navbar Layout
+ * Medora Health CRM
+ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-6);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-light);
+    z-index: var(--z-sticky);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-teal);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-teal);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Navbar Actions */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.navbar-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.navbar-action:hover {
+    background: var(--bg-tertiary);
+    color: var(--primary-teal);
+}
+
+.navbar-action svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* User Menu */
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.navbar-user:hover {
+    background: var(--bg-tertiary);
+}
+
+.navbar-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+}
+
+.navbar-avatar svg {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-full);
+}
+
+.navbar-user-info {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-user-info {
+        display: block;
+    }
+    
+    .navbar-user-name {
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-medium);
+        color: var(--text-primary);
+    }
+    
+    .navbar-user-role {
+        font-size: var(--font-size-xs);
+        color: var(--text-secondary);
+    }
+}
+
+/* Notification Bell */
+.navbar-notification {
+    position: relative;
+}
+
+.navbar-notification .notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-secondary);
+}
+
+.navbar-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 1024px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+/* Navbar Search (optional) */
+.navbar-search {
+    display: none;
+    position: relative;
+    width: 300px;
+}
+
+.navbar-search input {
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+}
+
+.navbar-search input:focus {
+    background: var(--bg-primary);
+    border-color: var(--primary-teal);
+    outline: none;
+}
+
+.navbar-search svg {
+    position: absolute;
+    left: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-tertiary);
+}
+
+@media (min-width: 768px) {
+    .navbar-search {
+        display: block;
+    }
+}
+
+
+ * Navbar Layout
+ * Medora Health CRM
+ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-6);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-light);
+    z-index: var(--z-sticky);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-teal);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-teal);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Navbar Actions */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.navbar-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.navbar-action:hover {
+    background: var(--bg-tertiary);
+    color: var(--primary-teal);
+}
+
+.navbar-action svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* User Menu */
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.navbar-user:hover {
+    background: var(--bg-tertiary);
+}
+
+.navbar-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+}
+
+.navbar-avatar svg {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-full);
+}
+
+.navbar-user-info {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-user-info {
+        display: block;
+    }
+    
+    .navbar-user-name {
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-medium);
+        color: var(--text-primary);
+    }
+    
+    .navbar-user-role {
+        font-size: var(--font-size-xs);
+        color: var(--text-secondary);
+    }
+}
+
+/* Notification Bell */
+.navbar-notification {
+    position: relative;
+}
+
+.navbar-notification .notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-secondary);
+}
+
+.navbar-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 1024px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+/* Navbar Search (optional) */
+.navbar-search {
+    display: none;
+    position: relative;
+    width: 300px;
+}
+
+.navbar-search input {
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+}
+
+.navbar-search input:focus {
+    background: var(--bg-primary);
+    border-color: var(--primary-teal);
+    outline: none;
+}
+
+.navbar-search svg {
+    position: absolute;
+    left: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-tertiary);
+}
+
+@media (min-width: 768px) {
+    .navbar-search {
+        display: block;
+    }
+}
+

@@ -1,0 +1,360 @@
+/**
+ * Sidebar Layout
+ * Medora Health CRM
+ */
+
+/* Sidebar Container */
+.sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-light);
+    overflow-y: auto;
+    z-index: var(--z-sticky);
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+}
+
+.sidebar.is-open {
+    transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+    
+    .app-layout.has-sidebar {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: var(--space-4) var(--space-3);
+}
+
+.sidebar-nav-section {
+    margin-bottom: var(--space-6);
+}
+
+.sidebar-nav-title {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Sidebar Nav Items */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-1);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-nav-item:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar-nav-item.active {
+    background: var(--color-primary-50);
+    color: var(--primary-teal);
+}
+
+.sidebar-nav-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-nav-item-badge {
+    margin-left: auto;
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    background: var(--color-error);
+    color: white;
+    border-radius: var(--radius-full);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    padding: var(--space-4) var(--space-5);
+    border-top: 1px solid var(--border-light);
+    margin-top: auto;
+}
+
+/* Collapsed Sidebar */
+.sidebar.is-collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar.is-collapsed .sidebar-nav-item span:not(.sidebar-nav-item-badge) {
+    display: none;
+}
+
+.sidebar.is-collapsed .sidebar-nav-title {
+    display: none;
+}
+
+.sidebar.is-collapsed .sidebar-nav-item {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+    .app-layout.has-sidebar.sidebar-collapsed {
+        padding-left: var(--sidebar-collapsed-width);
+    }
+}
+
+/* Sidebar Overlay (Mobile) */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-overlay);
+    opacity: 0;
+    visibility: hidden;
+    z-index: calc(var(--z-sticky) - 1);
+    transition: all var(--transition-normal);
+}
+
+.sidebar-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 1024px) {
+    .sidebar-overlay {
+        display: none;
+    }
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: var(--space-4);
+    right: calc(var(--space-4) * -1);
+    transform: translateX(100%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-toggle:hover {
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+.sidebar-toggle svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+ * Sidebar Layout
+ * Medora Health CRM
+ */
+
+/* Sidebar Container */
+.sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-light);
+    overflow-y: auto;
+    z-index: var(--z-sticky);
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+}
+
+.sidebar.is-open {
+    transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+    
+    .app-layout.has-sidebar {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: var(--space-4) var(--space-3);
+}
+
+.sidebar-nav-section {
+    margin-bottom: var(--space-6);
+}
+
+.sidebar-nav-title {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Sidebar Nav Items */
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-1);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+}
+
+.sidebar-nav-item:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar-nav-item.active {
+    background: var(--color-primary-50);
+    color: var(--primary-teal);
+}
+
+.sidebar-nav-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-nav-item-badge {
+    margin-left: auto;
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    background: var(--color-error);
+    color: white;
+    border-radius: var(--radius-full);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    padding: var(--space-4) var(--space-5);
+    border-top: 1px solid var(--border-light);
+    margin-top: auto;
+}
+
+/* Collapsed Sidebar */
+.sidebar.is-collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar.is-collapsed .sidebar-nav-item span:not(.sidebar-nav-item-badge) {
+    display: none;
+}
+
+.sidebar.is-collapsed .sidebar-nav-title {
+    display: none;
+}
+
+.sidebar.is-collapsed .sidebar-nav-item {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+    .app-layout.has-sidebar.sidebar-collapsed {
+        padding-left: var(--sidebar-collapsed-width);
+    }
+}
+
+/* Sidebar Overlay (Mobile) */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-overlay);
+    opacity: 0;
+    visibility: hidden;
+    z-index: calc(var(--z-sticky) - 1);
+    transition: all var(--transition-normal);
+}
+
+.sidebar-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 1024px) {
+    .sidebar-overlay {
+        display: none;
+    }
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: var(--space-4);
+    right: calc(var(--space-4) * -1);
+    transform: translateX(100%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-toggle:hover {
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+.sidebar-toggle svg {
+    width: 14px;
+    height: 14px;
+}
+

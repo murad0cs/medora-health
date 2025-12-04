@@ -2,21 +2,54 @@
   "name": "medora-health-crm",
   "version": "1.0.0",
   "description": "Medora Health Hospital Management System - A modern CRM for healthcare professionals",
-  "main": "index.html",
+  "type": "module",
   "scripts": {
-    "start": "echo 'Open index.html in your browser' && exit 0"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "npx serve src -l 3000"
   },
   "keywords": [
     "hospital",
     "crm",
     "healthcare",
     "patient-management",
-    "medical"
+    "medical",
+    "dashboard"
   ],
   "author": "Medora Health",
   "license": "PROPRIETARY",
   "repository": {
     "type": "git",
     "url": "https://github.com/medora-health/crm"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "terser": "^5.24.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
+    "url": "https://github.com/medora-health/crm"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "terser": "^5.24.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
+    "url": "https://github.com/medora-health/crm"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "terser": "^5.24.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

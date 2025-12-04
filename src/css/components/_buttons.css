@@ -1,0 +1,338 @@
+/**
+ * Button Components
+ * Medora Health CRM
+ */
+
+/* Base Button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: var(--radius-button);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--primary-teal);
+    color: var(--text-inverse);
+    border-color: var(--primary-teal);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-600);
+    border-color: var(--color-primary-600);
+}
+
+.btn-primary:active:not(:disabled) {
+    background-color: var(--color-primary-700);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: var(--bg-primary);
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-primary-50);
+}
+
+.btn-secondary:active:not(:disabled) {
+    background-color: var(--color-primary-100);
+}
+
+/* Ghost Button */
+.btn-ghost {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border-color: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Danger Button */
+.btn-danger {
+    background-color: var(--color-error);
+    color: var(--text-inverse);
+    border-color: var(--color-error);
+}
+
+.btn-danger:hover:not(:disabled) {
+    background-color: var(--color-error-dark);
+    border-color: var(--color-error-dark);
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+}
+
+.btn-sm svg {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-lg {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-base);
+}
+
+.btn-lg svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Icon Button */
+.btn-icon {
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+}
+
+.btn-icon.btn-sm {
+    padding: var(--space-1);
+}
+
+.btn-icon.btn-lg {
+    padding: var(--space-3);
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-radius: var(--radius-button) 0 0 var(--radius-button);
+}
+
+.btn-group .btn:last-child {
+    border-radius: 0 var(--radius-button) var(--radius-button) 0;
+}
+
+.btn-group .btn:not(:last-child) {
+    border-right: none;
+}
+
+/* Back Button */
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    color: var(--primary-teal);
+    transition: all var(--transition-fast);
+}
+
+.btn-back:hover {
+    background: var(--color-primary-50);
+    border-color: var(--primary-teal);
+}
+
+.btn-back svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+ * Button Components
+ * Medora Health CRM
+ */
+
+/* Base Button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: var(--radius-button);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--primary-teal);
+    color: var(--text-inverse);
+    border-color: var(--primary-teal);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-600);
+    border-color: var(--color-primary-600);
+}
+
+.btn-primary:active:not(:disabled) {
+    background-color: var(--color-primary-700);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: var(--bg-primary);
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-primary-50);
+}
+
+.btn-secondary:active:not(:disabled) {
+    background-color: var(--color-primary-100);
+}
+
+/* Ghost Button */
+.btn-ghost {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border-color: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Danger Button */
+.btn-danger {
+    background-color: var(--color-error);
+    color: var(--text-inverse);
+    border-color: var(--color-error);
+}
+
+.btn-danger:hover:not(:disabled) {
+    background-color: var(--color-error-dark);
+    border-color: var(--color-error-dark);
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+}
+
+.btn-sm svg {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-lg {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-base);
+}
+
+.btn-lg svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Icon Button */
+.btn-icon {
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+}
+
+.btn-icon.btn-sm {
+    padding: var(--space-1);
+}
+
+.btn-icon.btn-lg {
+    padding: var(--space-3);
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-radius: var(--radius-button) 0 0 var(--radius-button);
+}
+
+.btn-group .btn:last-child {
+    border-radius: 0 var(--radius-button) var(--radius-button) 0;
+}
+
+.btn-group .btn:not(:last-child) {
+    border-right: none;
+}
+
+/* Back Button */
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    color: var(--primary-teal);
+    transition: all var(--transition-fast);
+}
+
+.btn-back:hover {
+    background: var(--color-primary-50);
+    border-color: var(--primary-teal);
+}
+
+.btn-back svg {
+    width: 20px;
+    height: 20px;
+}
+

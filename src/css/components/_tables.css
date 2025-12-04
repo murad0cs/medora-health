@@ -1,0 +1,470 @@
+/**
+ * Table Components
+ * Medora Health CRM
+ */
+
+/* Table Container */
+.table-container {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* Base Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: var(--space-4) var(--space-5);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table td {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.table-hover tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Clickable Rows */
+.table-clickable tbody tr {
+    cursor: pointer;
+}
+
+/* Striped Table */
+.table-striped tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+/* Compact Table */
+.table-compact th,
+.table-compact td {
+    padding: var(--space-2) var(--space-4);
+}
+
+/* Table Cell Variants */
+.table td.text-center,
+.table th.text-center {
+    text-align: center;
+}
+
+.table td.text-right,
+.table th.text-right {
+    text-align: right;
+}
+
+/* Table with Avatar */
+.table-avatar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.table-avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+    flex-shrink: 0;
+}
+
+.table-avatar-img svg {
+    width: 18px;
+    height: 18px;
+}
+
+.table-avatar-info {
+    min-width: 0;
+}
+
+.table-avatar-name {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.table-avatar-sub {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+/* Table Actions Column */
+.table-row-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: flex-end;
+}
+
+.table-row-action {
+    padding: var(--space-2);
+    color: var(--text-tertiary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.table-row-action:hover {
+    color: var(--primary-teal);
+    background: var(--color-primary-50);
+}
+
+.table-row-action svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Pagination */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-top: 1px solid var(--border-light);
+}
+
+.pagination-info {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.pagination-btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.pagination-btn:hover:not(:disabled) {
+    border-color: var(--primary-teal);
+    color: var(--primary-teal);
+}
+
+.pagination-btn.active {
+    background: var(--primary-teal);
+    border-color: var(--primary-teal);
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Empty State */
+.table-empty {
+    padding: var(--space-12) var(--space-5);
+    text-align: center;
+}
+
+.table-empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-4);
+    color: var(--text-tertiary);
+}
+
+.table-empty-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.table-empty-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+
+ * Table Components
+ * Medora Health CRM
+ */
+
+/* Table Container */
+.table-container {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* Base Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: var(--space-4) var(--space-5);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table td {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+.table-hover tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Clickable Rows */
+.table-clickable tbody tr {
+    cursor: pointer;
+}
+
+/* Striped Table */
+.table-striped tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+/* Compact Table */
+.table-compact th,
+.table-compact td {
+    padding: var(--space-2) var(--space-4);
+}
+
+/* Table Cell Variants */
+.table td.text-center,
+.table th.text-center {
+    text-align: center;
+}
+
+.table td.text-right,
+.table th.text-right {
+    text-align: right;
+}
+
+/* Table with Avatar */
+.table-avatar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.table-avatar-img {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+    flex-shrink: 0;
+}
+
+.table-avatar-img svg {
+    width: 18px;
+    height: 18px;
+}
+
+.table-avatar-info {
+    min-width: 0;
+}
+
+.table-avatar-name {
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.table-avatar-sub {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+/* Table Actions Column */
+.table-row-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: flex-end;
+}
+
+.table-row-action {
+    padding: var(--space-2);
+    color: var(--text-tertiary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.table-row-action:hover {
+    color: var(--primary-teal);
+    background: var(--color-primary-50);
+}
+
+.table-row-action svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Pagination */
+.table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-top: 1px solid var(--border-light);
+}
+
+.pagination-info {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.pagination-btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.pagination-btn:hover:not(:disabled) {
+    border-color: var(--primary-teal);
+    color: var(--primary-teal);
+}
+
+.pagination-btn.active {
+    background: var(--primary-teal);
+    border-color: var(--primary-teal);
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Empty State */
+.table-empty {
+    padding: var(--space-12) var(--space-5);
+    text-align: center;
+}
+
+.table-empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-4);
+    color: var(--text-tertiary);
+}
+
+.table-empty-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.table-empty-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+

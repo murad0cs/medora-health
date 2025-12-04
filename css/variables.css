@@ -60,6 +60,7 @@
     --radius-md: 12px;
     --radius-lg: 18px;
     --radius-xl: 20px;
+    --radius-card: 16px;
     --radius-pill: 30px;
     --radius-circle: 50%;
     
@@ -67,3 +68,5 @@
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
 }
+
+

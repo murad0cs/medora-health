@@ -7,18 +7,88 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/sidebar.css">
 <link rel="stylesheet" href="../css/ui-kit.css">
 </head>
-<body>
+<body class="has-sidebar">
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+    <div class="sidebar-logo" onclick="MedoraApp.navigate('doctor-preview.html')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    </div>
+    <div class="sidebar-nav">
+        <div class="sidebar-item" data-tooltip="首页" onclick="MedoraApp.navigate('doctor-preview.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </div>
+        <div class="sidebar-item" data-tooltip="病例管理" onclick="MedoraApp.navigate('case-list.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+        </div>
+        <div class="sidebar-item" data-tooltip="消息中心" onclick="MedoraApp.navigate('messages.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span class="badge"></span>
+        </div>
+        <div class="sidebar-item" data-tooltip="预约管理" onclick="MedoraApp.navigate('appointments.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-item" data-tooltip="报告中心" onclick="MedoraApp.navigate('reports.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+        </div>
+        <div class="sidebar-item active" data-tooltip="UI组件" onclick="MedoraApp.navigate('ui-kit.html')">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+        </div>
+    </div>
+    <div class="sidebar-bottom">
+        <div class="sidebar-item" data-tooltip="设置">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+        </div>
+    </div>
+</nav>
 
 <!-- TOP NAVBAR -->
 <div class="navbar">
     <div class="navbar-left">
-        <div class="logo"></div>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+        </div>
         <div class="system-title">Medora Health 医院管理系统</div>
     </div>
     <div class="navbar-right">
-        <div>doctor@china.com</div>
+        <span class="user-email">doctor@china.com</span>
         <div class="notification-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -32,15 +102,22 @@
                 <circle cx="12" cy="7" r="4"></circle>
             </svg>
         </div>
-        <span>Dr. Oven</span>
+        <span class="user-name">Dr. Oven</span>
     </div>
 </div>
 
 <div class="page">
 
     <div class="back-row">
-        <div class="back-icon"></div>
-        UI Kit & Style Guide
+        <button class="back-icon" onclick="MedoraApp.navigate('doctor-preview.html')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <div class="page-title-section">
+            <h1 class="page-title">UI Kit & Style Guide</h1>
+            <p class="page-subtitle">设计系统组件和样式指南</p>
+        </div>
     </div>
 
     <!-- TOP METRIC CARDS -->
@@ -230,12 +307,199 @@
     <!-- STATUS CHIPS -->
     <div class="status-row">
         <div class="status-chip">
-            <div class="status-icon"></div>
+            <div class="status-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
             <span>发送成功</span>
             <span class="status-dot green"></span>
         </div>
 
         <div class="status-chip">
+            <div class="status-icon warning">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <span>待关注</span>
+            <span class="status-dot red"></span>
+            <span class="status-dot yellow"></span>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/common.js"></script>
+<script src="../js/ui-kit.js"></script>
+</body>
+</html>
+
+        <h3 class="section-title">表单样式</h3>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">活动名称</span>
+                <input class="input" placeholder="请输入文字内容…" />
+            </div>
+
+            <div class="form-group">
+                <span class="label">选择框</span>
+                <select class="select">
+                    <option>请选择内容</option>
+                    <option>选项 1</option>
+                    <option>选项 2</option>
+                    <option>选项 3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">选择时间</span>
+                <div class="date-row">
+                    <input class="input" type="date" placeholder="选择日期" />
+                    <input class="input" type="time" placeholder="选择时间" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">提交按钮</span>
+                <div class="segmented">
+                    <button class="active">立即使用</button>
+                    <button>选择时间</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary">确认</button>
+    </div>
+
+    <!-- TAB SECTION -->
+    <div>
+        <div class="tab-section-title">TAB</div>
+        <div class="tabs">
+            <div class="tab active">新建病例</div>
+            <div class="tab">预约管理</div>
+            <div class="tab">消息</div>
+            <div class="tab">任务</div>
+            <div class="tab">统计报表</div>
+            <div class="tab">质量跟踪</div>
+        </div>
+    </div>
+
+    <!-- STATUS CHIPS -->
+    <div class="status-row">
+        <div class="status-chip">
+            <div class="status-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <span>发送成功</span>
+            <span class="status-dot green"></span>
+        </div>
+
+        <div class="status-chip">
+            <div class="status-icon warning">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <span>待关注</span>
+            <span class="status-dot red"></span>
+            <span class="status-dot yellow"></span>
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/common.js"></script>
+<script src="../js/ui-kit.js"></script>
+</body>
+</html>
+
+        <h3 class="section-title">表单样式</h3>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">活动名称</span>
+                <input class="input" placeholder="请输入文字内容…" />
+            </div>
+
+            <div class="form-group">
+                <span class="label">选择框</span>
+                <select class="select">
+                    <option>请选择内容</option>
+                    <option>选项 1</option>
+                    <option>选项 2</option>
+                    <option>选项 3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">选择时间</span>
+                <div class="date-row">
+                    <input class="input" type="date" placeholder="选择日期" />
+                    <input class="input" type="time" placeholder="选择时间" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <span class="label">提交按钮</span>
+                <div class="segmented">
+                    <button class="active">立即使用</button>
+                    <button>选择时间</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary">确认</button>
+    </div>
+
+    <!-- TAB SECTION -->
+    <div>
+        <div class="tab-section-title">TAB</div>
+        <div class="tabs">
+            <div class="tab active">新建病例</div>
+            <div class="tab">预约管理</div>
+            <div class="tab">消息</div>
+            <div class="tab">任务</div>
+            <div class="tab">统计报表</div>
+            <div class="tab">质量跟踪</div>
+        </div>
+    </div>
+
+    <!-- STATUS CHIPS -->
+    <div class="status-row">
+        <div class="status-chip">
+            <div class="status-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <span>发送成功</span>
+            <span class="status-dot green"></span>
+        </div>
+
+        <div class="status-chip">
+            <div class="status-icon warning">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
             <span>待关注</span>
             <span class="status-dot red"></span>
             <span class="status-dot yellow"></span>
